@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Ahsan</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #050b20, #12264a, #291447);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      radial-gradient(white 1px, transparent 1px),
+      radial-gradient(#f9d976 1px, transparent 1px);
+    background-size: 55px 55px, 85px 85px;
+    animation: sparkle 5s linear infinite;
+    opacity: 0.45;
+}
+
+@keyframes sparkle {
+    from { background-position: 0 0, 0 0; }
+    to { background-position: 55px 55px, -85px 85px; }
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 55px 10px 35px;
+}
+
+.tag {
+    color: #f9d976;
+    letter-spacing: 5px;
+    font-size: 12px;
+    margin-bottom: 22px;
+}
+
+h1 {
+    font-size: clamp(38px, 10vw, 68px);
+    color: #f9d976;
+    text-shadow: 0 0 25px #c59b37;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #b8860b; }
+    to { text-shadow: 0 0 30px #ffe9a3; }
+}
+
+.name {
+    font-size: clamp(48px, 12vw, 85px);
+    color: white;
+    margin: 10px 0;
+    font-style: italic;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #d9e6ff;
+    line-height: 1.8;
+    margin: 20px auto;
+}
+
+.cake {
+    font-size: 100px;
+    margin: 22px 0;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+.card {
+    margin: 25px auto;
+    padding: 25px 20px;
+    border: 1px solid #e6c66d;
+    border-radius: 22px;
+    background: rgba(255,255,255,0.07);
+    box-shadow: 0 0 30px rgba(249,217,118,0.12);
+}
+
+.card h2 {
+    color: #f9d976;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #e6ecff;
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    border-radius: 35px;
+    background: linear-gradient(90deg, #f9d976, #e8a83e);
+    color: #10172d;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 15px 28px;
+    margin: 20px 0;
+    cursor: pointer;
+    box-shadow: 0 0 20px #c49a45;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+#surprise {
+    display: none;
+    margin-top: 15px;
+    padding: 20px;
+    color: #ffe9a3;
+    line-height: 1.9;
+    font-size: 18px;
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.balloon {
+    position: fixed;
+    bottom: -100px;
+    font-size: 35px;
+    animation: floatUp 9s linear infinite;
+    z-index: 0;
+}
+
+.b1 { left: 8%; animation-delay: 0s; }
+.b2 { left: 28%; animation-delay: 3s; }
+.b3 { left: 70%; animation-delay: 1s; }
+.b4 { left: 88%; animation-delay: 5s; }
+
+@keyframes floatUp {
+    0% { transform: translateY(0) rotate(0); }
+    100% { transform: translateY(-120vh) rotate(25deg); }
+}
+
+footer {
+    color: #c6d4f4;
+    font-size: 13px;
+    padding: 20px 0;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<div class="balloon b1">🎈</div>
+<div class="balloon b2">🎈</div>
+<div class="balloon b3">🎈</div>
+<div class="balloon b4">🎈</div>
+
+<main class="container">
+
+    <p class="tag">A SPECIAL DAY • A SPECIAL PERSON</p>
+
+    <h1>Happy Birthday</h1>
+    <div class="name">Ahsan</div>
+
+    <p class="subtitle">
+        Today is your day to shine! ✨<br>
+        Let the celebrations begin!
+    </p>
+
+    <div class="cake">🎂</div>
+
+    <section class="card">
+        <h2>🌟 Birthday Wishes 🌟</h2>
+
+        <p>
+            May your life be filled with happiness,<br>
+            your heart with peace,<br>
+            your days with laughter,<br>
+            and your future with endless success.
+            <br><br>
+            May every new year bring you closer
+            to your dreams and give you countless
+            reasons to smile.
+            <br><br>
+            Keep shining, keep smiling,
+            and always be the amazing person you are!
+        </p>
+    </section>
+
+    <p style="color:#f9d976; font-size:20px;">
+        🎁 Ready for your surprise?
+    </p>
+
+    <button onclick="showSurprise()">
+        ✨ Open Your Surprise ✨
+    </button>
+
+    <div id="surprise">
+        🎉 HAPPY BIRTHDAY, AHSAN! 🎉
+        <br><br>
+        May your wishes turn into reality,
+        your hard work turn into success,
+        and your life become a beautiful journey
+        full of unforgettable memories.
+        <br><br>
+        Stay blessed and enjoy your special day! 💙
+        <br><br>
+        🎂 🎈 🎁 🥳
+    </div>
+
+    <footer>
+        Made with 💙 & lots of birthday wishes
+    </footer>
+
+</main>
+
+<script>
+function showSurprise() {
+    const surprise = document.getElementById("surprise");
+
+    surprise.style.display = "block";
+
+    surprise.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+    launchConfetti();
+}
+
+function launchConfetti() {
+    const emojis = ["🎉", "✨", "💛", "🎊", "⭐"];
+
+    for (let i = 0; i < 35; i++) {
+        const piece = document.createElement("span");
+
+        piece.textContent =
+            emojis[Math.floor(Math.random() * emojis.length)];
+
+        piece.style.position = "fixed";
+        piece.style.left = Math.random() * 100 + "vw";
+        piece.style.top = "-30px";
+        piece.style.fontSize = "22px";
+        piece.style.zIndex = "10";
+        piece.style.pointerEvents = "none";
+
+        document.body.appendChild(piece);
+
+        const duration = 2000 + Math.random() * 2500;
+
+        piece.animate([
+            { transform: "translateY(0) rotate(0deg)", opacity: 1 },
+            {
+                transform:
+                    "translateY(105vh) rotate(600deg)",
+                opacity: 0
+            }
+        ], {
+            duration: duration,
+            easing: "ease-in"
+        });
+
+        setTimeout(() => piece.remove(), duration);
+    }
+}
+</script>
+
+</body>
+</html>
+<audio id="birthdayMusic" loop>
+    <source src="birthday.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="toggleMusic()" id="musicButton">
+    🎵 Play Birthday Music
+</button>
+
+<script>
+function toggleMusic() {
+    const music = document.getElementById("birthdayMusic");
+    const button = document.getElementById("musicButton");
+
+    if (music.paused) {
+        music.play().then(() => {
+            button.textContent = "⏸️ Pause Music";
+        }).catch(() => {
+            alert("Please check your birthday.mp3 file.");
+        });
+    } else {
+        music.pause();
+        button.textContent = "🎵 Play Birthday Music";
+    }
+}
+</script>
